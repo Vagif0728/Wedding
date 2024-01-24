@@ -1,0 +1,34 @@
+﻿
+@model LoginVM
+
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Default form</h4>
+            <p class="card-description">
+                Basic form layout
+            </p>
+            <form method="post" class="forms-sample" enctype="multipart/form-data">
+                
+                <div class="form-group">
+                    <label asp-for="UsernameOrEmail">UsernameOrEmail</label>
+                    <input asp-for="UsernameOrEmail" class="form-control" id="exampleInputUsername1" placeholder="UsernameOrEmail">
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Password">Description</label>
+                    <input asp-for="Password" class="form-control" placeholder="Password">
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="IsRememberMe">IsRememberdMe</label>
+                    <input asp-for="IsRememberMe" class="form-control" placeholder="Password">
+                </div>
+
+
+                <button type="submit" class="btn btn-primary mr-2">Login</button>
+               
+            </form>
+        </div>
+    </div>
+</div>

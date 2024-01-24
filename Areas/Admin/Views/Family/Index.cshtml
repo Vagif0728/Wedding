@@ -1,0 +1,49 @@
+﻿@model List<Family>
+
+@{
+    int count = 0;
+}
+
+<div class="col-lg-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <a asp-action="create" asp-controller="family" asp-area="admin" class="btn btn-primary">Create Table</a>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Settings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach(Family family in Model)
+                        {
+                            count++;
+                            <tr>
+                                <td>@count</td>
+                                <td>
+                                    <img src="~/images/@family.Image">
+                                </td>
+                                <td>@family.Name</td>
+                                <td>@family.Description</td>
+                                <td>
+                                    <a class="btn btn-primary" asp-action="update" asp-controller="family" asp-area="admin" asp-route-id="@family.Id" > Update </a>
+                                    <a class="btn btn-danger" asp-action="delete" asp-controller="family" asp-area="admin"asp-route-id="@family.Id"> Delete </a>
+                                </td>
+                            </tr>
+                        }
+                        
+                       
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

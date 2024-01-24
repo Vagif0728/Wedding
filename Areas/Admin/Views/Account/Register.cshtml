@@ -1,0 +1,46 @@
+﻿@model RegisterVM
+
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Default form</h4>
+            <p class="card-description">
+                Basic form layout
+            </p>
+            <form method="post" class="forms-sample" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="Username">Username</label>
+                    <input asp-for="Username" class="form-control" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <label asp-for="Name">Name</label>
+                    <input asp-for="Name" class="form-control" id="exampleInputUsername1" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label asp-for="Surname">Name</label>
+                    <input asp-for="Surname" class="form-control" id="exampleInputUsername1" placeholder="Surname">
+                </div>
+                 <div class="form-group">
+                    <label asp-for="Email">Email</label>
+                    <input asp-for="Email" class="form-control" placeholder="Email">
+                </div>
+
+
+                <div class="form-group">
+                    <label asp-for="Password">Password</label>
+                    <input asp-for="Password" class="form-control" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label asp-for="ConfrimPassword">ConfrimPasssword</label>
+                    <input asp-for="ConfrimPassword" class="form-control" placeholder="ConfrimPassword">
+                </div>
+
+
+
+
+                <button type="submit" class="btn btn-primary mr-2">Register</button>
+
+            </form>
+        </div>
+    </div>
+</div>
